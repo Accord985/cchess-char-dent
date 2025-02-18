@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        user-select: none;
+      }
+    </style>
+    <!-- importmap defines alias for import statements -->
+    <!-- importmap is for a quick startup. With vite you can import the files from node_modules -->
+    <!-- you can specify the version by adding @v0.158.0 (0.158.0 is the version number)
+    after the module name (three in this case) -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.158.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.158.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <!-- open this with a live server! -->
+    <button id="base">bases</button>
+    <button id="text">text</button>
+    <div id="test-scripts"></div>
+  </body>
+</html>
